@@ -17,21 +17,22 @@ function calcROI() {
 
   document.getElementById("result").innerText = `ROI: ${roi.toFixed(2)}%`;
 
+  // Teljesen részletes gondolatmenet, csak a változó számok kékek
   const explanation = `
-1. A képlet: ROI = (Bevétel – Költség) / Költség × 100
-2. Helyettesítés: (<span class="font-semibold text-blue-600">${revenue}</span> – <span class="font-semibold text-blue-600">${cost}</span>) / <span class="font-semibold text-blue-600">${cost}</span> × 100
-3. Kiszámoljuk a nyereséget: <span class="font-semibold text-blue-600">${revenue}</span> – <span class="font-semibold text-blue-600">${cost}</span> = <span class="font-semibold text-blue-600">${profit}</span>
-4. Elosztjuk a nyereséget a költséggel: <span class="font-semibold text-blue-600">${profit}</span> ÷ <span class="font-semibold text-blue-600">${cost}</span> = <span class="font-semibold text-blue-600">${ratio.toFixed(
+<p>1. A képlet: ROI = (Bevétel – Költség) / Költség × 100</p>
+<p>2. Helyettesítés: (<span class="text-blue-600 font-semibold">${revenue}</span> – <span class="text-blue-600 font-semibold">${cost}</span>) / <span class="text-blue-600 font-semibold">${cost}</span> × 100</p>
+<p>3. Kiszámoljuk a nyereséget: <span class="text-blue-600 font-semibold">${revenue}</span> – <span class="text-blue-600 font-semibold">${cost}</span> = <span class="text-blue-600 font-semibold">${profit}</span></p>
+<p>4. Elosztjuk a nyereséget a költséggel: <span class="text-blue-600 font-semibold">${profit}</span> ÷ <span class="text-blue-600 font-semibold">${cost}</span> = <span class="text-blue-600 font-semibold">${ratio.toFixed(
     2
-  )}</span>
-5. Szorozzuk 100-zal: <span class="font-semibold text-blue-600">${ratio.toFixed(
+  )}</span></p>
+<p>5. Szorozzuk 100-zal: <span class="text-blue-600 font-semibold">${ratio.toFixed(
     2
-  )}</span> × 100 = <span class="font-semibold text-blue-600">${roi.toFixed(
+  )}</span> × 100 = <span class="text-blue-600 font-semibold">${roi.toFixed(
     2
-  )}%</span>
-6. Értelmezés: Minden elköltött 1 Ft után <span class="font-semibold text-blue-600">${ratio.toFixed(
+  )}%</span></p>
+<p>6. Értelmezés: Minden elköltött 1 Ft után <span class="text-blue-600 font-semibold">${ratio.toFixed(
     2
-  )}</span> Ft nyereség keletkezett.
+  )}</span> Ft nyereség keletkezett.</p>
 `;
 
   document.getElementById("explanation").innerHTML = explanation;
